@@ -18,29 +18,33 @@ Presentation Layer: Manages UI-related logic using ViewModel and LiveData. The U
 
 The project is organized into the following directories:
 
-app/src/main/java/com/sample
-├── data
-│   ├── repository
-│   │   └── SampleRepository.kt
-│   └── source
-│       ├── local
-│       │   ├── ModelDao.kt
-│       │   └── AppDatabase.kt
-│       └── remote
-│           └── ApiService.kt
-├── di
-│   └── AppModule.kt
-├── domain
-│   ├── model
-│   │   └── Model.kt
-│   └── usecase
-│       └── FetchModelUseCase.kt
-├── presentation
-│   ├── view
-│   │   ├── MyScreen.kt
-│   │   └── NextScreen.kt
-│   └── viewmodel
-│       └── SampleViewModel.kt
+- app/src/main/java/com/sample
+   - data/repository
+
+   - SampleRepository.kt: Implements the repository pattern, combining data from both remote and local sources.
+- data/source/local
+
+   - ModelDao.kt: Defines the Room DAO for accessing the local database.
+   - AppDatabase.kt: Configures the Room database.
+- data/source/remote
+
+   - ApiService.kt: Defines the Retrofit API service.
+- di
+
+   - AppModule.kt: Provides dependency injection setup using Hilt.
+- domain/model
+
+   - Model.kt: Defines the data model.
+- domain/usecase
+
+   - FetchModelUseCase.kt: Contains business logic for fetching data.
+- presentation/view
+
+   - MyScreen.kt: Composable function for the main screen.
+   - NextScreen.kt: Composable function for the next screen.
+- presentation/viewmodel
+
+   - SampleViewModel.kt: Manages UI-related data in a lifecycle-conscious way.
 
 4. Key Components
 
