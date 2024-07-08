@@ -18,11 +18,11 @@ Presentation Layer: Manages UI-related logic using ViewModel and LiveData. The U
 
 The project is organized into the following directories:
 
-app/src/main/java/com/sample
-data
-repository
-SampleRepository.kt
-source
+- app/src/main/java/com/sample
+-- data
+--- repository
+  ---- SampleRepository.kt
+-- source
 local
 ModelDao.kt
 AppDatabase.kt
