@@ -43,15 +43,16 @@ viewmodel
 SampleViewModel.kt
 4. Key Components
 
-ApiService.kt: Defines the Retrofit API service.
-ModelDao.kt: Defines the Room DAO for accessing the local database.
-AppDatabase.kt: Configures the Room database.
-SampleRepository.kt: Implements the repository pattern.
-FetchModelUseCase.kt: Contains business logic for fetching data.
-SampleViewModel.kt: Manages UI-related data in a lifecycle-conscious way.
-MyScreen.kt: Composable function for the main screen.
-NextScreen.kt: Composable function for the next screen.
-AppModule.kt: Provides dependency injection setup using Hilt.
+| ApiService.kt: Defines the Retrofit API service.
+| ModelDao.kt: Defines the Room DAO for accessing the local database.
+| AppDatabase.kt: Configures the Room database.
+| SampleRepository.kt: Implements the repository pattern.
+| FetchModelUseCase.kt: Contains business logic for fetching data.
+| SampleViewModel.kt: Manages UI-related data in a lifecycle-conscious way.
+| MyScreen.kt: Composable function for the main screen.
+| NextScreen.kt: Composable function for the next screen.
+| AppModule.kt: Provides dependency injection setup using Hilt.
+
 5. Dependency Management
    Dependencies are managed using Gradle Kotlin DSL and libs.versions.toml for library versions.
 6. Navigation Setup
