@@ -18,29 +18,29 @@ Presentation Layer: Manages UI-related logic using ViewModel and LiveData. The U
 
 The project is organized into the following directories:
 
-- app/src/main/java/com/sample
--- data
---- repository
-  ---- SampleRepository.kt
--- source
-local
-ModelDao.kt
-AppDatabase.kt
-remote
-ApiService.kt
-di
-AppModule.kt
-domain
-model
-Model.kt
-usecase
-FetchModelUseCase.kt
-presentation
-view
-MyScreen.kt
-NextScreen.kt
-viewmodel
-SampleViewModel.kt
+app/src/main/java/com/sample
+├── data
+│   ├── repository
+│   │   └── SampleRepository.kt
+│   └── source
+│       ├── local
+│       │   ├── ModelDao.kt
+│       │   └── AppDatabase.kt
+│       └── remote
+│           └── ApiService.kt
+├── di
+│   └── AppModule.kt
+├── domain
+│   ├── model
+│   │   └── Model.kt
+│   └── usecase
+│       └── FetchModelUseCase.kt
+├── presentation
+│   ├── view
+│   │   ├── MyScreen.kt
+│   │   └── NextScreen.kt
+│   └── viewmodel
+│       └── SampleViewModel.kt
 
 4. Key Components
 
