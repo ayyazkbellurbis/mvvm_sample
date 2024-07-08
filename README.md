@@ -5,12 +5,12 @@ This project follows the Model-View-ViewModel (MVVM) architecture pattern, which
 
 2. Modules and Layers
 
-Data Layer: Handles data operations. It includes:
+- Data Layer: Handles data operations. It includes:
 
-Remote Data Source: Manages API calls using Retrofit.
-Local Data Source: Manages local database operations using Room.
-Repository: Serves as a single source of truth, combining both remote and local data sources.
-Domain Layer: Contains use cases that represent business logic.
+   - Remote Data Source: Manages API calls using Retrofit.
+   - Local Data Source: Manages local database operations using Room.
+   - Repository: Serves as a single source of truth, combining both remote and local data sources.
+   - Domain Layer: Contains use cases that represent business logic.
 
 Presentation Layer: Manages UI-related logic using ViewModel and LiveData. The UI is built with Jetpack Compose.
 
@@ -21,30 +21,30 @@ The project is organized into the following directories:
 - app/src/main/java/com/sample
    - data/repository
 
-   - SampleRepository.kt: Implements the repository pattern, combining data from both remote and local sources.
-- data/source/local
+      - SampleRepository.kt: Implements the repository pattern, combining data from both remote and local sources.
+   - data/source/local
 
-   - ModelDao.kt: Defines the Room DAO for accessing the local database.
-   - AppDatabase.kt: Configures the Room database.
-- data/source/remote
+      - ModelDao.kt: Defines the Room DAO for accessing the local database.
+      - AppDatabase.kt: Configures the Room database.
+   - data/source/remote
 
-   - ApiService.kt: Defines the Retrofit API service.
-- di
+      - ApiService.kt: Defines the Retrofit API service.
+   - di
 
-   - AppModule.kt: Provides dependency injection setup using Hilt.
-- domain/model
+      - AppModule.kt: Provides dependency injection setup using Hilt.
+   - domain/model
 
-   - Model.kt: Defines the data model.
-- domain/usecase
+      - Model.kt: Defines the data model.
+   - domain/usecase
 
-   - FetchModelUseCase.kt: Contains business logic for fetching data.
-- presentation/view
+      - FetchModelUseCase.kt: Contains business logic for fetching data.
+   - presentation/view
 
-   - MyScreen.kt: Composable function for the main screen.
-   - NextScreen.kt: Composable function for the next screen.
-- presentation/viewmodel
+      - MyScreen.kt: Composable function for the main screen.
+      - NextScreen.kt: Composable function for the next screen.
+   - presentation/viewmodel
 
-   - SampleViewModel.kt: Manages UI-related data in a lifecycle-conscious way.
+      - SampleViewModel.kt: Manages UI-related data in a lifecycle-conscious way.
 
 4. Key Components
 
@@ -63,9 +63,9 @@ The project is organized into the following directories:
 6. Navigation Setup
 7. Testing
    Unit Testing
-For unit testing ViewModels and other classes, use JUnit and Mockito. Place unit tests under app/src/test/java/com/sample.
-UI Testing
-For UI testing, use Espresso and Compose testing libraries. Place UI tests under app/src/androidTest/java/com/sample.
+      - For unit testing ViewModels and other classes, use JUnit and Mockito. Place unit tests under app/src/test/java/com/sample.
+- UI Testing
+   - For UI testing, use Espresso and Compose testing libraries. Place UI tests under app/src/androidTest/java/com/sample.
 
 
 This document should help you understand the structure and architecture of your MVVM project, as well as guide you through navigation setup and testing practices
